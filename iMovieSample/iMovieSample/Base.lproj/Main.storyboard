@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iMovieSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDb-6o-dR8" customClass="MoviePlayerView" customModule="iMovieSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="627"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oi2-tc-Zmo" customClass="PlayerButton" customModule="iMovieSample" customModuleProvider="target">
+                                <rect key="frame" x="191.5" y="701" width="33" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Oi2-tc-Zmo" secondAttribute="height" multiplier="1:1" constant="1" id="2l1-09-mT7"/>
+                                    <constraint firstAttribute="height" constant="32" id="nSw-tt-xL5"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="didTapPlayerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ydh-Pl-dxM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hDb-6o-dR8" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="0Jm-vo-Fwy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hDb-6o-dR8" secondAttribute="trailing" id="0fv-kN-19l"/>
+                            <constraint firstItem="hDb-6o-dR8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AJI-ab-NbV"/>
+                            <constraint firstItem="Oi2-tc-Zmo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="The-fn-CQD"/>
+                            <constraint firstItem="Oi2-tc-Zmo" firstAttribute="top" secondItem="hDb-6o-dR8" secondAttribute="bottom" constant="30" id="o5t-d0-x8q"/>
+                            <constraint firstItem="hDb-6o-dR8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uDT-hC-zcT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerButton" destination="Oi2-tc-Zmo" id="EAH-OH-zcT"/>
+                        <outlet property="playerView" destination="hDb-6o-dR8" id="1N1-59-1iB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="115"/>
+        </scene>
+    </scenes>
+</document>
